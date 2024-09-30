@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning Popup</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #db3445; /* Background color is now white */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column; /* Center elements vertically */
+        }
+
+        .warning-container {
+            position: relative;
+            background-color: #fff; /* Light gray background */
+            padding: 10px;
+            border-radius: 10px;
+            border: 10px solid #db3445; /* White border */
+            text-align: center; /* Center the inner content */
+            max-width: 400px; /* Adjust the max-width as needed */
+        }
+
+        .message-box {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #db3445; /* Text color is now the primary color */
+        }
+
+        .warning-image {
+            width: 100px; /* Adjust the size as needed */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #777; /* Gray color for the footer text */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="warning-container">
+    <div class="message-box">
+        Warning: You could have just got hacked!
+    </div>
+    <img class="warning-image" src="warning.jpeg" alt="Warning Image">
+    <div class="footer">
+        This was a training tool to raise awareness for hacking methods, if you were going to enter you two factor you could have lost your email account. Never share your dual authentication with anyone!
+    </div>
+</div>
+
+<footer class="w3-container w3-center w3-opacity">
+  <div class="w3-xxlarge">
+    <a href="https://github.com/ikepawsat" target="_blank" class="w3-hover-opacity">
+        <i class="fa fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/john-pawsat-a9748627a/" target="_blank" class="w3-hover-opacity">
+        <i class="fa fa-linkedin"></i>
+    </a>
+ </div>
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> and by <a href="https://github.com/" target="_blank">github.com</a></p>
+</footer>
+
+</body>
+</html>

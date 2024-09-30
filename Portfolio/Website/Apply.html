@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo_table.jpeg" type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <title>Tablemade Apply</title>
+    <link rel="stylesheet" href="app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+    .w3-container {
+            padding-top: 64px;
+        }
+
+        .apply-form {
+            margin-right: 20px;
+        }
+
+        .apply-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .apply-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+        }
+
+        .apply-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .apply-form button:hover {
+            background-color: #45a049;
+        }
+        /* Style for the popup */
+        #popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 20px;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          z-index: 1000;
+        }
+  </style>
+</style>
+</head>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="Apply.html" class="w3-bar-item w3-button w3-padding-large w3-white">Apply</a>
+    <a href="About_Us.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
+    <a href="Opportunities.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Opportunities</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="Apply.html" class="w3-bar-item w3-button w3-padding-large">Apply</a>
+    <a href="About_Us.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
+    <a href="Opportunities.html" class="w3-bar-item w3-button w3-padding-large">Opporunities</a>
+  </div>
+</div>
+
+<div class="w3-container w3-padding-64">
+    <div class="w3-content">
+        <div class="w3-half apply-form">
+            <h1>Apply Now</h1>
+            <form action="submit_application.php" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <label for="password">Retype Password:</label>
+                <input type="password" id="repassword" name="password" required><br>
+
+                <button type="submit" onclick="GetStarted()">Submit</button>
+            </form>
+            <img id="myImage" src="google_button.png" alt="Google Button" onclick="openPopup()" style="cursor: pointer; max-width: 200px; max-height: 200px;">
+        </div>
+    </div>
+</div>
+
+<footer class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+  <div class="w3-xxlarge w3-padding-16">
+    <a href="https://github.com/ikepawsat" target="_blank" class="w3-hover-opacity">
+        <i class="fa fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/john-pawsat-a9748627a/" target="_blank" class="w3-hover-opacity">
+        <i class="fa fa-linkedin"></i>
+    </a>
+ </div>
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p>And by <a href="https://github.com/" target="_blank">github.com</a></p>
+</footer>
+
+
+<script>
+    function GetStarted() {
+        alert("Our Login Servers are currently undergoing maintenance, please login with Google. You may need to go back a page when it cuts out. Sorry for the inconvenience.");
+    }
+    function openPopup() {
+        var popupWindow = window.open('popup.html', '_blank', 'width=400,height=400,scrollbars=yes,resizable=yes');
+    }
+</script>
+
+</body>
+</html>

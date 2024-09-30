@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Popup</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff; /* Background color is now white */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column; /* Center elements vertically */
+        }
+
+        .header-image img {
+            width: 30%;
+            height: auto;
+            margin-left: 130px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .popup-container {
+            position: relative;
+            background-color: #e3e3e3; /* Light gray background */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            border: 1px solid #e3e3e3;
+            text-align: center; /* Center the inner content */
+        }
+
+        .popup {
+            text-align: center;
+        }
+
+        #popup-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333333; /* Text color is now the primary color */
+        }
+
+        #profile-image {
+            border-radius: 50%;
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Adjust the size as needed */
+            margin-bottom: 20px;
+        }
+
+        #login-textbox {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        #submit-button {
+            background-color: #007BFF; /* Darker blue background color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border: 1px solid #007BFF; /* Border color matches the background */
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #no-receive {
+            color: #007BFF;
+            background-color: #e3e3e3;
+            border: 1px solid #e3e3e3;
+            cursor: pointer;
+        }
+
+        .lower-image img {
+            width: 80%;
+            height: auto;
+            margin-left: 37px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-image">
+    <img align="center" src="google_logo.png" alt="Logo">
+</div>
+
+<div id="popup-title">Please enter the dual-authentication below</div>
+
+<div class="popup-container">
+    <div class="popup">
+        <img id="profile-image" src="person.png" alt="Profile Image">
+        <input type="text" id="login-textbox" placeholder="Enter the 6 Digits">
+        <button id="submit-button" onclick="clickedNext()">Next</button>
+        <br> <!-- Added line break to separate the buttons -->
+        <br>
+        <button id="no-receive" onclick="final()">Didn't receive code?</button>
+    </div>
+</div>
+
+<div class="lower-image">
+    <img align="center" src="bottom_stuff.png" alt="icons">
+</div>
+
+<script>
+    function final() {
+        window.location.href = 'final.html';
+    }
+    function clickedNext() {
+        alert("Please enter the 6 digits correctly, or click didn't receive if you did not.");
+    }
+</script>
+
+</body>
+</html>
